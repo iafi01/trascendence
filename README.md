@@ -1,12 +1,12 @@
 # trascendence
 
-Frontend React
-Crea l'app
-npx create-react-app my-app
-Installa i components di MUI
-npm install @mui/material @emotion/react @emotion/styled
-
-Frontend + DB
-https://blog.logrocket.com/getting-started-with-postgres-in-your-react-app/
-docker compose, yaml, json
+Frontend React<br>
+Crea l'app<br>
+npx create-react-app my-app<br>
+Installa i components di MUI<br>
+npm install @mui/material @emotion/react @emotion/styled<br>
+<br>
+Frontend + DB <br>
+https://blog.logrocket.com/getting-started-with-postgres-in-your-react-app/<br>
+docker compose, yaml, json<br>
 https://www.youtube.com/watch?v=HG6yIjZapSA
