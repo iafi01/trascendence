@@ -12,4 +12,6 @@ docker compose, yaml, json<br>
 https://www.youtube.com/watch?v=HG6yIjZapSA<br>
 https://coreui.io/blog/how-to-create-a-single-page-application-using-reactjs/<br>
 Prisma vs Script of Sql
-https://dev.to/shubhampatilsd/use-prisma-instead-of-sql-2g47
+https://dev.to/shubhampatilsd/use-prisma-instead-of-sql-2g47 <br>
+Potrebbe essere utile CHAT REACT COMPONENT
+https://upmostly.com/tutorials/calling-a-react-component-on-button-click
