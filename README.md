@@ -17,4 +17,5 @@ Potrebbe essere utile CHAT REACT COMPONENT<br>
 https://upmostly.com/tutorials/calling-a-react-component-on-button-click<br>
 alignment flexbox <br>
 https://mdbootstrap.com/docs/react/layout/flexbox/<br>
-NESTJS https://www.youtube.com/watch?v=BiN-xzNkH_0
+NESTJS https://www.youtube.com/watch?v=BiN-xzNkH_0 <br>
+https://medium.com/@awaisshaikh94/chat-component-built-with-react-and-material-ui-c2b0d9ccc491
