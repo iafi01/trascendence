@@ -8,5 +8,6 @@ there is a <b>channel and dm systems</b>, because they can be private, protected
 
 There is a <b>invite system to play</b>, a <b>matchmaking system</b> and all <br>
 <b>social</b> functionality like friendship and block user.<br><br>
-The current project is on Maikesama's private repo.
+Stack <React, Nest Js, Bootstrap, Mui, Postgres SQL, Prisma, Websocket, IntraApi><br><br>
+
 
