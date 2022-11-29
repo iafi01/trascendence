@@ -1,0 +1,85 @@
+/* * {
+    padding: 0;
+    margin: 0;
+  }
+  canvas {
+    background: rgb(227, 166, 166);
+    display: block;
+    margin: 0 auto;
+  }*/
+
+body{
+    background-color: dimgray;
+    /* background-image: url('../../images/animaImg.gif');
+    background-repeat: repeat; */
+}
+#myCanvas{
+    border: 2px solid #FFF;
+    background-color: black;
+    color : #FFF;
+    position: absolute;
+    margin :auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    width: 80%;
+    /* height: 100%; */
+}
+
+#gameBG {
+    height: calc(100vh);
+    background-image: url("../../images/animaImg.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#esit {
+    position: absolute;
+    margin :auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin-top: 10%;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* #quitButtonGame {
+    position: absolute;
+    margin :auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+} */
+
+#textMatchmaking{
+    position: absolute;
+    margin :auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#buttonGameHome {
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+    border: 2px solid #FFF;
+    font-family: 'Press Start 2P', cursive;
+}

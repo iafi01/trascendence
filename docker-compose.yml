@@ -1,0 +1,108 @@
+version: '3.8'
+
+services:
+
+  # frontend:
+  #   image: "frontend2"
+  #   build:
+  #     dockerfile: 'Dockerfile'
+  #     context: ./srcs/frontend
+  #   volumes:
+  #     - ./srcs/frontend/src:/app/src
+  #   expose:
+  #     - "3000"
+  #   environment:
+  #     REACT_APP_HOST_URI: ${REACT_APP_HOST_URI}
+  #     # WDS_SOCKET_PORT: ${WDS_SOCKET_PORT}
+  #   container_name: frontend
+  #   depends_on:
+  #     - "backend"
+  #   networks:
+  #     - trascendecne
+
+  frontend:
+    image: "node:16-slim"
+    # user: "node"
+    build:
+      dockerfile: 'Dockerfile.prod'
+      context: ./srcs/frontend
+    working_dir: /home/node/app
+    restart: unless-stopped
+    # volumes:
+    #   - ./srcs/frontend:/home/node/app
+    expose:
+      - "3000"
+    # logging:
+    #   driver: "none"
+    environment:
+      REACT_APP_HOST_URI: ${REACT_APP_HOST_URI}
+    container_name: frontend
+    depends_on:
+      - "backend"
+    networks:
+      - trascendecne
+
+  backend:
+    image: "backend"
+    build:
+      dockerfile: 'Dockerfile'
+      context: ./srcs/backend
+    restart: unless-stopped
+    volumes:
+      - ./srcs/backend/src:/app/src
+    expose:
+      - "3333"
+      - "4244"
+    # ports:
+    #   - "8080:5555"
+    environment:
+      HOST: ${REACT_APP_HOST_URI}
+      DATABASE_URL: ${DATABASE_URL}
+    container_name: backend
+    depends_on:
+      - "database"
+    networks:
+      - trascendecne
+
+
+  database:
+    image: postgres:13
+    expose:
+      - "5432"
+    container_name: database
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    networks:
+      - trascendecne
+
+  proxy:
+    container_name: proxy
+    image: proxy
+    build:
+      context: ./srcs/proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "8002:8002"
+      - "8003:8003"
+    depends_on:
+      - frontend
+      - backend
+    restart: always
+    networks:
+      - trascendecne
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    ports:
+      - 8080:8080
+    restart: always
+    networks:
+      - trascendecne
+
+
+networks:
+  trascendecne:
